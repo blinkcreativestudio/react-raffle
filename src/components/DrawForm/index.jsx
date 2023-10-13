@@ -30,7 +30,7 @@ class DrawForm extends Component {
         <div className="form">
           <Form onSubmit={onSubmit}>
             <Form.FieldSet>
-              <Form.Group label="List of Items" isRequired>
+              <Form.Group label="List of Names" isRequired>
                 <Form.Textarea
                   name="drawItems"
                   placeholder={placeholder}
@@ -57,7 +57,7 @@ class DrawForm extends Component {
                 type="submit"
                 disabled={drawItems.length < 2}
               >
-                Configure
+                CONFIGURE
               </Button>
             </Form.FieldSet>
           </Form>

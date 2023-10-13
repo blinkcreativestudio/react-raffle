@@ -1,9 +1,27 @@
+:root {
+  --bi-blue: #0000ff;
+  --bi-poultry-title: "Conthrax", sans-serif !important;
+}
+
+.draw-section {
+  font-family: "Oswald", "Source Sans 3", sans-serif !important;
+}
+
 .contribute-button {
   margin-left: 18px;
 }
 
 .draw-block {
   text-align: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.draw-block .row {
+  gap: 2rem;
 }
 
 .draw-form {
@@ -12,8 +30,11 @@
 
 .draw-section {
   font-size: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   padding-top: 40px;
+
+  /* BI-POULTRY  */
+  color: var(--bi-blue);
 }
 
 .result-section {
@@ -22,4 +43,55 @@
 
 .review-section {
   overflow-y: scroll;
+}
+
+.btn {
+  margin-left: 50% !important;
+  transform: translateX(-50%) !important;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  /* PHILSAN  */
+
+  /* background-color: #339443 !important;
+  border-color: #339443 !important; */
+  /* border-radius: 1rem 0 !important; */
+  padding: 4px 1rem;
+
+  /* BI-POULTRY  */
+  background-image: linear-gradient(to right, var(--bi-blue), cyan);
+  border-radius: 0px;
+  border: none;
+}
+
+.btn-block {
+  width: auto !important;
+}
+
+/* Rolling items/names  */
+.x0.x3.x4.x5 {
+  left: 50%;
+  translate: -50% !important;
+  color: gray;
+  font-size: 4rem;
+  font-family: var(--bi-poultry-title);
+}
+
+.draw-section-header {
+  width: fit-content;
+  margin: 2rem auto;
+  padding: 0.5rem 2rem;
+  background-image: linear-gradient(to right, var(--bi-blue), cyan);
+  border-radius: 0px;
+  border: none;
+  text-align: center;
+}
+
+.draw-section-header-text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: unset;
 }

@@ -15,6 +15,20 @@ class SiteWrapper extends React.Component {
       <Site.Wrapper
         headerProps={{
           href: '/',
+          alt: "Boehringer Ingelheim 6th Digitech Talks: Online Technical Forum",
+          imageURL: 'images/luckydraw-logo.svg',
+          navItems: null,
+        }}
+        navProps={{ itemsObjects: null }}
+        footerProps={{
+          note: null,
+          copyright: null,
+          nav: null,
+        }}
+      >
+      {/* <Site.Wrapper
+        headerProps={{
+          href: '/',
           alt: APP_NAME,
           imageURL: 'images/luckydraw-logo.svg',
           navItems: <NavItems />,
@@ -25,7 +39,7 @@ class SiteWrapper extends React.Component {
           copyright: <Copyright />,
           nav: <NavBar />,
         }}
-      >
+      > */}
         <div className="container main-section">{this.props.children}</div>
       </Site.Wrapper>
     );

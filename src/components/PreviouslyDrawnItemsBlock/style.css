@@ -1,7 +1,35 @@
-.past-drawn-block {
-  height: 250px;
-  overflow-y: scroll;
+:root {
+  --bi-blue: #0000ff;
 }
+
+.past-drawn-block {
+  height: 380px;
+  overflow-y: scroll;
+  background: none;
+  border: none;
+}
+
 .past-drawn-item {
-  text-align: center;
+  text-align: left;
+}
+
+.past-drawn-item td {
+  border: none;
+  padding: 0.5rem 0 0 0;
+}
+
+.card-header {
+  /* PHILSAN */
+  display: flex;
+  /* justify-content: center; */
+
+  /* BI-POULTRY */
+  background-image: linear-gradient(to right, var(--bi-blue), cyan);
+  color: white;
+  padding: 0.5rem 1rem;
+  min-height: unset;
+}
+
+.card-body {
+  padding: 0.5rem 1rem;
 }

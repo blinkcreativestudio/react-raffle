@@ -10,8 +10,8 @@ import { Helmet } from 'react-helmet';
 import PreviouslyDrawnItemsBlock from '../../components/PreviouslyDrawnItemsBlock';
 import { REVIEW } from '../Json-ld';
 import SiteWrapper from '../../SiteWrapper';
-import SponsorsSection from '../../components/SponsorsSection';
 import TextLoop from 'react-text-loop';
+// import SponsorsSection from '../../components/SponsorsSection';
 
 class App extends Component {
   constructor(props) {
@@ -84,7 +84,7 @@ class App extends Component {
 
     let maxItemIndex = currentItems.length;
     const randomIndex = Math.floor(Math.random() * maxItemIndex);
-    this.sleep(showTextAnimation ? 3000 : 0).then(() => {
+    this.sleep(showTextAnimation ? 5000 : 0).then(() => {
       this.setState({
         ...this.state,
         result: currentItems[randomIndex],
@@ -122,16 +122,25 @@ class App extends Component {
           <meta charSet="utf-8" />
           <script type="application/ld+json">{REVIEW}</script>
         </Helmet>
+        <Grid.Row>
+          <Grid.Col>
+            <div className="draw-section-header">
+              <h3 className="draw-section-header-text">
+                Raffle Draw
+              </h3>
+            </div>
+          </Grid.Col>
+        </Grid.Row>
         {items.length !== 0 && (
           <div className="draw-block">
-            <Grid.Row>
-              <Grid.Col md={5} sm={12}>
+            <Grid.Row className="justify-content-center align-items-center w-100">
+              <Grid.Col md={8} sm={12}>
                 <div className="draw-section">
                   {!showResult && items && (
                     <TextLoop
-                      className="draw-text"
-                      interval={100}
-                      springConfig={{ stiffness: 180, damping: 8 }}
+                      className="draw-text text-center"
+                      interval={130}
+                      springConfig={{ stiffness: 200, damping: 10 }}
                       children={items}
                     />
                   )}
@@ -139,23 +148,22 @@ class App extends Component {
                   {showResult && result}
                 </div>
                 <Button
-                  pill
                   block
                   name="drawButton"
                   color="primary"
                   onClick={this.randomDrawItem}
                   disabled={disableDrawButton || currentItems.length <= 1}
                 >
-                  {disableDrawButton ? 'Drawing...' : 'Draw'}
+                  {disableDrawButton ? 'DRAWING...' : 'DRAW'}
                 </Button>
               </Grid.Col>
-              <Grid.Col md={4} sm={12}>
+              <Grid.Col md={3} sm={12}>
                 <PreviouslyDrawnItemsBlock pastDrawnItems={pastDrawnItems} />
               </Grid.Col>
             </Grid.Row>
           </div>
         )}
-        <Grid.Row>
+        <Grid.Row className="justify-content-center pt-5">
           <Grid.Col xs={12} md={8}>
             <DrawForm
               className="draw-form"
@@ -168,10 +176,8 @@ class App extends Component {
             />
           </Grid.Col>
         </Grid.Row>
-        <hr />
-        <SponsorsSection />
-        <hr />
-        <Grid.Row>
+        {/* <SponsorsSection /> */}
+        {/* <Grid.Row>
           <Grid.Col xs={12} md={6} className="review-section">
             <h2>What Our Users Say</h2>
             <div className="powr-reviews" id="83081483_1602856389"></div>
@@ -198,7 +204,7 @@ class App extends Component {
               </blockquote>
             </div>
           </Grid.Col>
-        </Grid.Row>
+        </Grid.Row> */}
       </SiteWrapper>
     );
   }

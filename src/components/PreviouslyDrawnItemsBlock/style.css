@@ -1,10 +1,10 @@
 :root {
-  --bi-blue: #0000ff;
+  --bi-blue: #0157b9;
+  --bi-cyan: #00c0ff;
 }
 
 .past-drawn-block {
   height: 380px;
-  overflow-y: scroll;
   background: none;
   border: none;
 }
@@ -24,7 +24,7 @@
   /* justify-content: center; */
 
   /* BI-POULTRY */
-  background-image: linear-gradient(to right, var(--bi-blue), cyan);
+  background-image: linear-gradient(to right, var(--bi-blue), var(--bi-cyan));
   color: white;
   padding: 0.5rem 1rem;
   min-height: unset;
@@ -32,4 +32,5 @@
 
 .card-body {
   padding: 0.5rem 1rem;
+  overflow-y: scroll;
 }

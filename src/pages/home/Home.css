@@ -1,10 +1,8 @@
 :root {
-  --bi-blue: #0000ff;
+  --bi-blue: #0157b9;
+  --bi-cyan: #00c0ff;
   --bi-poultry-title: "Conthrax", sans-serif !important;
-}
-
-.draw-section {
-  font-family: "Oswald", "Source Sans 3", sans-serif !important;
+  --bi-font-size: 4rem;
 }
 
 .contribute-button {
@@ -13,7 +11,8 @@
 
 .draw-block {
   text-align: center;
-  height: 80vh;
+  margin-top: 5rem;
+  margin-bottom: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,11 +29,14 @@
 
 .draw-section {
   font-size: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
   padding-top: 40px;
 
   /* BI-POULTRY  */
   color: var(--bi-blue);
+  font-size: var(--bi-font-size);
+  font-family: var(--bi-poultry-title);
+  text-transform: uppercase;
 }
 
 .result-section {
@@ -60,7 +62,7 @@
   padding: 4px 1rem;
 
   /* BI-POULTRY  */
-  background-image: linear-gradient(to right, var(--bi-blue), cyan);
+  background-image: linear-gradient(to right, var(--bi-blue), var(--bi-cyan));
   border-radius: 0px;
   border: none;
 }
@@ -74,15 +76,15 @@
   left: 50%;
   translate: -50% !important;
   color: gray;
-  font-size: 4rem;
+  font-size: var(--bi-font-size);
   font-family: var(--bi-poultry-title);
 }
 
 .draw-section-header {
   width: fit-content;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 0.5rem 2rem;
-  background-image: linear-gradient(to right, var(--bi-blue), cyan);
+  background-image: linear-gradient(to right, var(--bi-blue), var(--bi-cyan));
   border-radius: 0px;
   border: none;
   text-align: center;
@@ -94,4 +96,15 @@
   font-size: 60px;
   font-weight: 600;
   margin-bottom: unset;
+}
+
+.event-logo {
+  width: 100%;
+  height: auto;
+}
+
+.event-logo-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }

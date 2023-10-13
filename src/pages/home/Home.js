@@ -123,6 +123,11 @@ class App extends Component {
           <script type="application/ld+json">{REVIEW}</script>
         </Helmet>
         <Grid.Row>
+          <div className='event-logo-container col-3'>
+            <img className="event-logo" src="/images/BIP_6THDIGITECHTALK_LOGO copy.png"/>
+          </div>
+        </Grid.Row>
+        <Grid.Row>
           <Grid.Col>
             <div className="draw-section-header">
               <h3 className="draw-section-header-text">
